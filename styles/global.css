@@ -58,7 +58,7 @@ body {
 
   gap: 3.12rem;
 
-  background-color: #FAFAFA;
+  background-color: var(--background-primary);
 }
 
 main {
