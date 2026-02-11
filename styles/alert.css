@@ -1,0 +1,23 @@
+#alert {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: var(--color-danger);
+
+  margin-top: 2rem;
+
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+}
+
+.message {
+  margin-left: 0.5rem;
+  color: var(--always-white);
+}
+
+#close {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
