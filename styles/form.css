@@ -1,0 +1,32 @@
+input {
+  outline: 0;
+  width: 100%;
+  height: 2.75rem;
+
+  border: 0.125rem solid var(--border-primary);
+  border-radius: 0.75rem;
+
+  background-color: var(--background-secondary);
+  padding: 0.5rem 1.125rem;
+
+  margin-bottom: 1rem;
+}
+
+button {
+  height: 2.75rem;
+  width: 100%;
+
+  background-color: var(--color-brand);
+
+  border: none;
+  border-radius: 0.75rem;
+
+  color: var(--always-white);
+
+  font: 600 1rem/1.25 var(--ff-base);
+  cursor: pointer;
+
+  outline: 0;
+
+  margin-bottom: 1.75rem;
+}
