@@ -30,3 +30,18 @@ button {
 
   margin-bottom: 1.75rem;
 }
+
+@media (width >=80em) {
+  form {
+    display: flex;
+    gap: 1rem;
+  }
+
+  input {
+    width: 72%;
+  }
+
+  button {
+    width: 28%;
+  }
+}

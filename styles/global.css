@@ -49,7 +49,7 @@ h1 {
 
 body {
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
 
   display: flex;
   align-items: center;
@@ -62,7 +62,21 @@ body {
 }
 
 main {
-  width: 20rem;
+  width: 100%;
 
   overflow-y: hidden;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.margin {
+  margin-top: 1.75rem;
+}
+
+@media (width >=80em) {
+  main {
+    width: 40rem;
+  }
 }
