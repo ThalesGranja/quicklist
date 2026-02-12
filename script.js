@@ -5,6 +5,8 @@ const list = document.getElementById("list");
 const alert = document.getElementById("alert");
 const closeAlert = document.getElementById("close");
 
+let alertTimeout;
+
 function setupRemoveEvent(item) {
   const trashIcon = item.querySelector(".trash");
 
@@ -43,13 +45,32 @@ function addItem(name) {
   list.append(item);
 }
 
+function hideAlert() {
+  alert.classList.add("remove-animation");
+
+  setTimeout(() => {
+    alert.classList.add("hidden");
+    alert.classList.remove("remove-animation");
+  }, 500);
+}
+
 function showAlert() {
+  alert.classList.remove("remove-animation");
   alert.classList.remove("hidden");
+
+  clearTimeout(alertTimeout);
+
+  alertTimeout = setTimeout(() => {
+    hideAlert();
+  }, 3000);
 }
 
 closeAlert.onclick = (event) => {
   event.preventDefault();
-  alert.classList.add("hidden");
+
+  hideAlert();
+
+  clearTimeout(alertTimeout);
 };
 
 form.onsubmit = (event) => {
