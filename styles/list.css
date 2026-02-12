@@ -45,8 +45,7 @@
 }
 
 /* Hover e foco */
-.checkbox-wrapper:hover .checkbox-image,
-.checkbox-wrapper:focus-within .checkbox-image {
+.checkbox-wrapper:hover .checkbox-image {
   background-image: url("../assets/icons/checkbox-hover.svg");
 }
 
