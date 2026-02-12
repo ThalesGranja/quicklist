@@ -63,6 +63,7 @@ body {
 
 main {
   width: 100%;
+  padding: 2rem;
 
   overflow-y: hidden;
 }
@@ -75,8 +76,9 @@ main {
   margin-top: 1.75rem;
 }
 
-@media (width >=80em) {
+@media (width >=79em) {
   main {
     width: 40rem;
+    padding: 0;
   }
 }
