@@ -10,6 +10,22 @@ input {
   padding: 0.5rem 1.125rem;
 
   margin-bottom: 1rem;
+
+  &::placeholder {
+    color: var(--content-tertiary);
+  }
+}
+
+input:hover {
+  border: 0.125rem solid var(--border-hover);
+}
+
+input:focus-within {
+  border: 0.125rem solid var(--color-brand);
+
+  &::placeholder {
+    color: var(--content-primary);
+  }
 }
 
 button {
@@ -29,6 +45,10 @@ button {
   outline: 0;
 
   margin-bottom: 1.75rem;
+}
+
+button:hover {
+  background-color: var(--color-brand-hover);
 }
 
 @media (width >=79em) {
