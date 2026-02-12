@@ -1,9 +1,25 @@
-const form = document.querySelector("form")
+const form = document.querySelector("form");
 const newItem = document.getElementById("item");
 const list = document.getElementById("list");
 
 const alert = document.getElementById("alert");
 const closeAlert = document.getElementById("close");
+
+function setupRemoveEvent(item) {
+  const trashIcon = item.querySelector(".trash");
+
+  trashIcon.onclick = (event) => {
+    event.preventDefault();
+    item.remove();
+    showAlert();
+  };
+}
+
+const existingItems = document.querySelectorAll(".item");
+
+existingItems.forEach((item) => {
+  setupRemoveEvent(item);
+});
 
 function addItem(name) {
   const item = document.createElement("div");
@@ -20,15 +36,9 @@ function addItem(name) {
     <a href="#" class="trash" class="trash">
       <img src="./assets/icons/trash-icon.svg" alt="Ícone de lixo">
     </a>
-  `
+  `;
 
-  const trashIcon = item.querySelector(".trash");
-  trashIcon.onclick = (event) => {
-    event.preventDefault();
-
-    item.remove();
-    showAlert();
-  }
+  setupRemoveEvent(item);
 
   list.append(item);
 }
@@ -40,7 +50,7 @@ function showAlert() {
 closeAlert.onclick = (event) => {
   event.preventDefault();
   alert.classList.add("hidden");
-}
+};
 
 form.onsubmit = (event) => {
   event.preventDefault();
